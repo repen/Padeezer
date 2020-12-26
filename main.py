@@ -68,7 +68,7 @@ class Deezer:
                 AUTHOR = data["DATA"]["ART_NAME"]
                 title = " - ".join( [ AUTHOR, data["DATA"]["ALB_TITLE"] ] )
 
-                image_layer = _image.format( soup.select_one("#naboo_album_image")["src"] )
+                image_layer = _image.format( soup.select_one('meta[content][property="og:image"]')["content"] )
 
                 build=[]
                 _duration = 0
