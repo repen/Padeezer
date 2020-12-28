@@ -38,7 +38,7 @@ class Deezer:
             pass
 
     def main(self):
-        table = '''<table><tbody>{}</tbody></table>'''.strip()
+        _table = '''<table><tbody>{}</tbody></table>'''.strip()
         _iframe = '<iframe scrolling="no" frameborder="0" src="https://www.deezer.com/plugins/player?format=square&amp;autoplay=false&amp;playlist=false&amp;width=300&amp;height=300&amp;color=ff0000&amp;layout=dark&amp;size=medium&amp;type=album&amp;id={}&amp;app_id=1" width="300" height="300"></iframe>'
         _image = '<img src="{}" alt="" class="fr-fic fr-dib">'
         urls = self.open_urls()
@@ -83,7 +83,7 @@ class Deezer:
                     string1 += '<td style="width:11.1111%;" width="25">{}</td></tr>'.format(temp)
                     build.append(string1)
 
-                table = table.format( "".join(build) )
+                table = _table.format( "".join(build) )
 
                 author = AUTHOR
 
